@@ -29,54 +29,58 @@ $(document).ready(function() {
     $('#12').val(localStorage.getItem('event3'));
 
     $('.saveBtn5').on('click', function(){
-        let value = $('#1').val();
+        let value = $('#13').val();
         localStorage.setItem('event4', value)
     });
-    $('#1').val(localStorage.getItem('event4'));
+    $('#13').val(localStorage.getItem('event4'));
 
     $('.saveBtn6').on('click', function(){
-        let value = $('#2').val();
+        let value = $('#14').val();
         localStorage.setItem('event5', value)
     });
-    $('#2').val(localStorage.getItem('event5'));
+    $('#14').val(localStorage.getItem('event5'));
 
     $('.saveBtn7').on('click', function(){
-        let value = $('#3').val();
+        let value = $('#15').val();
         localStorage.setItem('event6', value)
     });
-    $('#3').val(localStorage.getItem('event6'));
+    $('#15').val(localStorage.getItem('event6'));
 
     $('.saveBtn8').on('click', function(){
-        let value = $('#4').val();
+        let value = $('#16').val();
         localStorage.setItem('event7', value)
     });
-    $('#4').val(localStorage.getItem('event7'));
+    $('#16').val(localStorage.getItem('event7'));
 
     $('.saveBtn9').on('click', function(){
-        let value = $('#5').val();
+        let value = $('#17').val();
         localStorage.setItem('event8', value)
     });
-    $('#5').val(localStorage.getItem('event8'));
+    $('#17').val(localStorage.getItem('event8'));
 
 
+    // checks time of day then add appropriate class to textarea
+    function timeOfDay() {
+        
+        var currentHour = moment().hours();
+        console.log(currentHour)
 
+    $(".description").each(function() {
+        var blockHour = parseInt($(this).attr("id"));
+        console.log(blockHour)
+        
+        if (blockHour < currentHour) {
+          $(this).addClass("past");
+        } 
+        else if (blockHour === currentHour) {
+          $(this).addClass("present");
+        } 
+        else {
+          $(this).addClass("future");
+        }
+      });
+    }
 
-   
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    timeOfDay();
 
 });
