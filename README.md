@@ -24,3 +24,6 @@ Found a bug? Review any [open issues][open-issues] or create a [new issues here]
 
 ## License
 This application does not hold any licenses.
+
+[open-issues]: https://dbridgman1.github.io/Day-Planner/issues/
+[new-issue]: https://dbridgman1.github.io/Day-Planner/new
